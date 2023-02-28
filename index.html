@@ -30,8 +30,8 @@
               <img id="profileImage" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                 class="rounded-circle img-fluid" style="width: 150px;">
               <h5 class="my-3 name">John Smith</h5>
-              <p class="text-muted mb-1">Full Stack Developer</p>
-              <p class="text-muted mb-2">email@mail.com</p>
+              <p class="text-muted mb-1">Username</p>
+              <p class="text-muted mb-2">example@example.com</p>
               <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
               <p class="text-muted font-italic mb-4">Birthday
               <div class="d-flex justify-content-center mb-2">
@@ -75,7 +75,7 @@
                   <p class="mb-0">Full Name</p>
                 </div>
                 <div class="col-sm-9">
-                  <p class="text-muted mb-0 name">Johnatan Smith</p>
+                  <p class="text-muted mb-0 name">John Smith</p>
                 </div>
               </div>
               <hr>
@@ -203,9 +203,8 @@ fetch('https://randomuser.me/api/')
     document.querySelector('#profileImage').src = user.picture.large;
     document.querySelector('#profileName').innerText = `${user.name.first} ${user.name.last}`;
     document.querySelector('#profileUserName').innerText = user.login.username;
+    document.querySelector('#profileEmail').innerText = user.email;
     document.querySelector('#profileLocation').innerText = `${user.location.city}, ${user.location.state}, ${user.location.country}`;
-    document.querySelector('#profilePhone').innerText = user.phone;
-    document.querySelector('#profileAddress').innerText = `${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${user.location.state} ${user.location.postcode}`;
     document.querySelector('#profileBirthday').innerText = user.dob.date;
   });
 
