@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
   <section style="background-color: #eee;">
     <div class="container py-5">
@@ -27,8 +29,8 @@
         <div class="col-lg-4">
           <div class="card mb-4">
             <div class="card-body text-center">
-              <img id="profileImage" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-                class="rounded-circle img-fluid" style="width: 150px;">
+              <img id="profileImage" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
               <h5 class="my-3 name">John Smith</h5>
               <p class="text-muted mb-2 email">example@example.com</p>
               <p class="text-muted mb-4 profileLocation">Bay Area, San Francisco, CA</p>
@@ -82,30 +84,31 @@
                   <p class="mb-0">Email</p>
                 </div>
                 <div class="col-sm-9">
-                  <p class="text-muted mb-0">example@example.com</p>
+                  <p class="text-muted mb-0 email">example@example.com</p>
                 </div>
               </div>
               <hr>
-              
+
               <div class="row">
                 <div class="col-sm-3">
                   <p class="mb-0">Address</p>
                 </div>
                 <div class="col-sm-9">
-                  <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                  <p class="text-muted mb-0 profileLocation">Bay Area, San Francisco, CA</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-6">
+              <h3 class="mb-4">Top 5 Friends</h3>
               <div class="friend-list">
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 </body>
@@ -114,43 +117,41 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
 
 <script>
-// Fetch from RandomUser.me API and update the profile
-fetch('https://randomuser.me/api/')
-  .then(response => response.json())
-  .then(data => {
-    let user = data.results[0];
-    let userName = `${user.name.first} ${user.name.last}`;
-    let socialUserName = user.login.username;
-    let email = user.email;
-    let profileLocation = `${user.location.city}, ${user.location.state}, ${user.location.country}`;
-    document.querySelector('.name').innerText = `${user.name.first} ${user.name.last}`;
-    document.querySelectorAll('.name').forEach(name => name.innerText = userName);
-    document.querySelector('#profileImage').src = user.picture.large;
-    document.querySelector('socialUserName').innerText = socialUserName;
-    document.querySelector('.email').innerText = user.email;
-    document.querySelectorAll('#email').forEach(email => email.innerText = email);
-    document.querySelector('#profileLocation').innerText = profileLocation;
-  });
-
-// Add the social user name to the social links
-document.querySelectorAll('.social-link').forEach((item) => {
-  item.href = `https://www.${item.id}.com/${socialUserName}`;
-  item.innerText = socialUserName;
-
-
-});
+  // Fetch from RandomUser.me API and update the profile
+  fetch('https://randomuser.me/api/')
+    .then(response => response.json())
+    .then(data => {
+      let user = data.results[0];
+      let userName = `${user.name.first} ${user.name.last}`;
+      let socialUserName = user.login.username;
+      let email = user.email;
+      let profileLocation = `${user.location.city}, ${user.location.state}, ${user.location.country}`;
+      document.querySelector('.name').innerText = `${user.name.first} ${user.name.last}`;
+      document.querySelectorAll('.name').forEach(name => name.innerText = userName);
+      document.querySelector('#profileImage').src = user.picture.large;
+      document.querySelectorAll('.email').forEach(email => email.innerText = user.email);
+      document.querySelectorAll('.profileLocation').forEach(location => location.innerText = profileLocation);
+      // document.querySelector('#profileLocation').innerText = profileLocation;
+      // Add the social user name to the social links
+      document.querySelectorAll('.social-link').forEach((item) => {
+        item.href = `https://www.${item.id}.com/${socialUserName}`;
+        item.innerText = socialUserName;
+      });
+    });
 
 
-// Get friends from RandomUser.me API and update the friends list
-fetch('https://randomuser.me/api/?results=5')
-  .then(response => response.json())
-  .then(data => {
-    let friends = data.results;
-    let friendsList = document.querySelector('.friend-list');
-    friends.forEach(friend => {
-      let friendCard = document.createElement('div');
-      friendCard.classList.add('card', 'mb-3');
-      friendCard.innerHTML = `
+
+
+  // Get friends from RandomUser.me API and update the friends list
+  fetch('https://randomuser.me/api/?results=5')
+    .then(response => response.json())
+    .then(data => {
+      let friends = data.results;
+      let friendsList = document.querySelector('.friend-list');
+      friends.forEach(friend => {
+        let friendCard = document.createElement('div');
+        friendCard.classList.add('card', 'mb-3');
+        friendCard.innerHTML = `
         <div class="card-body">
           <div class="row">
             <div class="col-sm-3">
@@ -163,9 +164,10 @@ fetch('https://randomuser.me/api/?results=5')
           </div>
         </div>
       `;
-      friendsList.appendChild(friendCard);
+        friendsList.appendChild(friendCard);
+      });
     });
-  });
 
 </script>
+
 </html>
