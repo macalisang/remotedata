@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
+  <title>User Profile Page</title>
   <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -30,10 +30,8 @@
               <img id="profileImage" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                 class="rounded-circle img-fluid" style="width: 150px;">
               <h5 class="my-3 name">John Smith</h5>
-              <p class="text-muted mb-1">Username</p>
-              <p class="text-muted mb-2">example@example.com</p>
-              <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
-              <p class="text-muted font-italic mb-4">Birthday
+              <p class="text-muted mb-2 email">example@example.com</p>
+              <p class="text-muted mb-4 profileLocation">Bay Area, San Francisco, CA</p>
               <div class="d-flex justify-content-center mb-2">
                 <button type="button" class="btn btn-primary">Follow</button>
                 <button type="button" class="btn btn-outline-primary ms-1">Message</button>
@@ -49,19 +47,19 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                  <p class="mb-0">mdbootstrap</p>
+                  <p class="mb-0"><a href="#" class="social-link">mdbootstrap</a></p>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                  <p class="mb-0">@mdbootstrap</p>
+                  <p class="mb-0"><a href="#" class="social-link">@mdbootstrap</a></p>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                  <p class="mb-0">mdbootstrap</p>
+                  <p class="mb-0"><a href="#" class="social-link">mdbootstrap</a></p>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                  <p class="mb-0">mdbootstrap</p>
+                  <p class="mb-0"><a href="#" class="social-link">mdbootstrap</a></p>
                 </li>
               </ul>
             </div>
@@ -88,24 +86,7 @@
                 </div>
               </div>
               <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0">Phone</p>
-                </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0">(097) 234-5678</p>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0">Mobile</p>
-                </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0">(098) 765-4321</p>
-                </div>
-              </div>
-              <hr>
+              
               <div class="row">
                 <div class="col-sm-3">
                   <p class="mb-0">Address</p>
@@ -117,69 +98,8 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <div class="card mb-4 mb-md-0">
-                <div class="card-body">
-                  <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                  </p>
-                  <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                  <div class="progress rounded mb-2" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card mb-4 mb-md-0">
-                <div class="card-body">
-                  <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                  </p>
-                  <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                  <div class="progress rounded" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                  <div class="progress rounded mb-2" style="height: 5px;">
-                    <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-lab-06/index.html                  </div>
+            <div class="col-lg-6">
+              <div class="friend-list">
                 </div>
               </div>
             </div>
@@ -198,14 +118,53 @@ lab-06/index.html                  </div>
 fetch('https://randomuser.me/api/')
   .then(response => response.json())
   .then(data => {
-    const user = data.results[0];
+    let user = data.results[0];
+    let userName = `${user.name.first} ${user.name.last}`;
+    let socialUserName = user.login.username;
+    let email = user.email;
+    let profileLocation = `${user.location.city}, ${user.location.state}, ${user.location.country}`;
     document.querySelector('.name').innerText = `${user.name.first} ${user.name.last}`;
+    document.querySelectorAll('.name').forEach(name => name.innerText = userName);
     document.querySelector('#profileImage').src = user.picture.large;
-    document.querySelector('#profileName').innerText = `${user.name.first} ${user.name.last}`;
-    document.querySelector('#profileUserName').innerText = user.login.username;
-    document.querySelector('#profileEmail').innerText = user.email;
-    document.querySelector('#profileLocation').innerText = `${user.location.city}, ${user.location.state}, ${user.location.country}`;
-    document.querySelector('#profileBirthday').innerText = user.dob.date;
+    document.querySelector('socialUserName').innerText = socialUserName;
+    document.querySelector('.email').innerText = user.email;
+    document.querySelectorAll('#email').forEach(email => email.innerText = email);
+    document.querySelector('#profileLocation').innerText = profileLocation;
+  });
+
+// Add the social user name to the social links
+document.querySelectorAll('.social-link').forEach((item) => {
+  item.href = `https://www.${item.id}.com/${socialUserName}`;
+  item.innerText = socialUserName;
+
+
+});
+
+
+// Get friends from RandomUser.me API and update the friends list
+fetch('https://randomuser.me/api/?results=5')
+  .then(response => response.json())
+  .then(data => {
+    let friends = data.results;
+    let friendsList = document.querySelector('.friend-list');
+    friends.forEach(friend => {
+      let friendCard = document.createElement('div');
+      friendCard.classList.add('card', 'mb-3');
+      friendCard.innerHTML = `
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <img src="${friend.picture.large}" alt="user" class="img-fluid rounded-circle w-100">
+            </div>
+            <div class="col-sm-9">
+              <h5 class="mb-0">${friend.name.first} ${friend.name.last}</h5>
+              <span class="text-secondary">${friend.email}</span>
+            </div>
+          </div>
+        </div>
+      `;
+      friendsList.appendChild(friendCard);
+    });
   });
 
 </script>
